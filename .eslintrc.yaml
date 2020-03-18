@@ -1,0 +1,66 @@
+parser: "@typescript-eslint/parser"
+parserOptions:
+  project: ./tsconfig.json
+  ecmaVersion: 2018
+  sourceType: module
+  ecmaFeatures:
+    ts: true
+plugins:
+  - "@typescript-eslint"
+  - react-app
+  - react-hooks
+  - import
+extends:
+  - plugin:@typescript-eslint/recommended
+  - plugin:react/recommended
+  - airbnb-typescript
+  - plugin:import/errors
+  - plugin:import/warnings
+env:
+  browser: true
+  commonjs: true
+  es6: true
+  node: true
+  jest: true
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+rules:
+  no-inner-declarations: 0
+  no-await-in-loop: 0
+  prefer-destructuring: 0
+  max-len: 0
+  linebreak-style: 0
+  global-require: 0
+  class-methods-use-this: 0
+  object-curly-newline: 0
+  no-plusplus: 0
+  no-param-reassign: 0
+  no-underscore-dangle: 0
+  no-nested-ternary: 0
+  radix: 0
+  import/no-unresolved: 0
+  import/prefer-default-export: 0
+  react/jsx-props-no-spreading: 0
+  jsx-a11y/anchor-is-valid: 0
+  jsx-a11y/label-has-for: 0
+  "@typescript-eslint/no-explicit-any": 0
+  "@typescript-eslint/no-var-requires": 0
+  "@typescript-eslint/explicit-function-return-type":
+    - 2
+    - allowExpressions: true
+    # - allowTypedFunctionExpressions: true
+  "@typescript-eslint/adjacent-overload-signatures": 1
+  "@typescript-eslint/no-non-null-assertion": 1
+  react-hooks/rules-of-hooks: error
+  react-hooks/exhaustive-deps: warn
+  react/jsx-one-expression-per-line: off
+settings:
+  import/parsers:
+    "@typescript-eslint/parser":
+      - .ts
+      - .tsx
+overrides:
+  - files: '*.tsx'
+    rules:
+      '@typescript-eslint/explicit-function-return-type': off
