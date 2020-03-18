@@ -12,6 +12,4 @@ firebase-debug.log
 .env
 temp/
 firebase-key.json
-shopify-config.json
 .vscode/
-src/public/storefront/syncube-addon.js
